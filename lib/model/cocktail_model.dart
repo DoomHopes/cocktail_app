@@ -37,6 +37,7 @@ class CocktailModel {
     this.strMeasure13,
     this.strMeasure14,
     this.strMeasure15,
+    this.strImageSource,
   });
 
   dynamic idDrink;
@@ -76,6 +77,7 @@ class CocktailModel {
   dynamic strMeasure13;
   dynamic strMeasure14;
   dynamic strMeasure15;
+  dynamic strImageSource;
 
   factory CocktailModel.fromJson(Map<String, dynamic> json) => CocktailModel(
         idDrink: json["idDrink"],
@@ -115,5 +117,6 @@ class CocktailModel {
         strMeasure13: json["strMeasure13"],
         strMeasure14: json["strMeasure14"],
         strMeasure15: json["strMeasure15"],
+        strImageSource: json["strImageSource"],
       );
 }
