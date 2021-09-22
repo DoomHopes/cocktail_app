@@ -8,7 +8,13 @@ class DetailWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: cocktailModel.strDrink,
+        ),
+      ),
+      body: Text(cocktailModel.strCategory),
+    );
   }
 }
