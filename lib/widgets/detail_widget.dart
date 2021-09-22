@@ -14,8 +14,11 @@ class DetailWidget extends StatelessWidget {
         ),
         body: Container(
           margin: const EdgeInsets.all(20),
-          child: Row(
+          child: Column(
             children: <Widget>[
+              Flexible(
+                  child:
+                      Image(image: NetworkImage(cocktailModel.strDrinkThumb))),
               Flexible(
                 child: Text(
                   cocktailModel.strInstructions,
