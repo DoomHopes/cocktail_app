@@ -12,7 +12,7 @@ class MyProvider extends ChangeNotifier {
   Widget listViewBuilder(String query) {
     if (coctailList.isEmpty) {
       getListFromAPI(query);
-      return CircularProgressLoading();
+      return const CircularProgressLoading();
     } else {
       return ListViewWidget(coctailList);
     }
