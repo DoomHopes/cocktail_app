@@ -18,7 +18,12 @@ class ListViewWidget extends StatelessWidget {
             title: Text(cocktails[index].strDrink),
             subtitle: Text(cocktails[index].strCategory),
             onTap: () {
-              DetailWidget(cocktails[index]);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailWidget(cocktails[index]),
+                ),
+              );
             },
           ),
         );
