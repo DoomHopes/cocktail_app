@@ -10,18 +10,30 @@ class DetailWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(cocktailModel.strDrink),
+          title: const Text('CocktailApp'),
         ),
         body: Container(
           margin: const EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
               Flexible(
-                  child:
-                      Image(image: NetworkImage(cocktailModel.strDrinkThumb))),
+                child: Image(
+                  image: NetworkImage(cocktailModel.strDrinkThumb),
+                ),
+              ),
+              Text(
+                cocktailModel.strDrink,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 25,
+                ),
+              ),
               Flexible(
                 child: Text(
                   cocktailModel.strInstructions,
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ],
