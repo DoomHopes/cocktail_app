@@ -8,10 +8,10 @@ class CircularProgressLoading extends StatelessWidget {
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const CircularProgressIndicator(),
-          const SizedBox(width: 40.0),
-          const Text('Loading data ....'),
+        children: const <Widget>[
+          CircularProgressIndicator(),
+          SizedBox(width: 40.0),
+          Text('Loading data ....'),
         ],
       ),
     );
