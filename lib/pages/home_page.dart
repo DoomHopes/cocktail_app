@@ -1,4 +1,5 @@
 import 'package:cocktail_app/provider/my_provider.dart';
+import 'package:cocktail_app/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Center(child: Text('Coctail App')),
         ),
+        drawer: DrawerWidget(),
         body: Visibility(
           child: providerData.listViewBuilder(urlTest),
         ),
