@@ -1,14 +1,32 @@
 import 'dart:convert';
 
 import 'package:cocktail_app/model/cocktail_model.dart';
+import 'package:cocktail_app/widgets/circular_progress_loading_widget.dart';
+import 'package:cocktail_app/widgets/list_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class MyProvider extends ChangeNotifier {
+  List<CocktailModel> coctailList = [];
+
   String urlTest =
       'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
-  Future<List<CocktailModel>> getData(int page, String query) async {
+  Widget listViewBuilder(String query) {
+    if (coctailList.isEmpty) {
+      getListFromAPI(query);
+      return CircularProgressLoading();
+    } else {
+      return ListViewWidget(coctailList);
+    }
+  }
+
+  Future<void> getListFromAPI(String query) async {
+    coctailList = await getData(query);
+    notifyListeners();
+  }
+
+  Future<List<CocktailModel>> getData(String query) async {
     try {
       var url = Uri.parse(query);
       final response = await http.get(url);
