@@ -25,6 +25,7 @@ class ListViewWidget extends StatelessWidget {
                 ),
               );
             },
+            trailing: const Icon(Icons.arrow_forward),
           ),
         );
       },

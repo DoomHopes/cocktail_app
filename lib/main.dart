@@ -1,6 +1,5 @@
 import 'package:cocktail_app/pages/home_page.dart';
 import 'package:cocktail_app/provider/my_provider.dart';
-import 'package:cocktail_app/widgets/detail_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
