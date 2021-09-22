@@ -2,7 +2,7 @@ import 'package:cocktail_app/model/cocktail_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailWidget extends StatelessWidget {
-  DetailWidget(this.cocktailModel);
+  DetailWidget(@required this.cocktailModel);
 
   CocktailModel cocktailModel;
 

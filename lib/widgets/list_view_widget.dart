@@ -1,4 +1,5 @@
 import 'package:cocktail_app/model/cocktail_model.dart';
+import 'package:cocktail_app/widgets/detail_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,9 @@ class ListViewWidget extends StatelessWidget {
           child: ListTile(
             title: Text(cocktails[index].strDrink),
             subtitle: Text(cocktails[index].strCategory),
+            onTap: () {
+              DetailWidget(cocktails[index]);
+            },
           ),
         );
       },
