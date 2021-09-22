@@ -9,9 +9,6 @@ import 'package:http/http.dart' as http;
 class MyProvider extends ChangeNotifier {
   List<CocktailModel> coctailList = [];
 
-  String urlTest =
-      'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
-
   Widget listViewBuilder(String query) {
     if (coctailList.isEmpty) {
       getListFromAPI(query);
