@@ -11,8 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String urlTest =
-      'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
+  String urlTest = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
   @override
   Widget build(BuildContext context) {

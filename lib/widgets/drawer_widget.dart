@@ -6,7 +6,7 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(
-        children: <Widget>[
+        children: const <Widget>[
           SizedBox(
             height: 100,
           ),
